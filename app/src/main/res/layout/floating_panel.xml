@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/floating_panel_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#CC444444"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <!-- 拖动把手（加大，容易按到） -->
+    <View
+        android:id="@+id/panel_drag_handle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginBottom="4dp"
+        android:background="#808080"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- 修饰键行 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <Button
+            android:id="@+id/panel_esc"
+            style="@style/KeyboardKey"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:text="Esc" />
+
+        <Button
+            android:id="@+id/panel_ctrl"
+            style="@style/KeyboardKey"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:text="Ctrl" />
+
+        <Button
+            android:id="@+id/panel_alt"
+            style="@style/KeyboardKey"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:text="Alt" />
+
+        <Button
+            android:id="@+id/panel_tab"
+            style="@style/KeyboardKey"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:text="Tab" />
+
+    </LinearLayout>
+
+    <!-- 方向键行 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <Button
+            android:id="@+id/panel_up"
+            style="@style/KeyboardKey"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:text="↑" />
+
+        <Button
+            android:id="@+id/panel_left"
+            style="@style/KeyboardKey"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:text="←" />
+
+        <Button
+            android:id="@+id/panel_down"
+            style="@style/KeyboardKey"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:text="↓" />
+
+        <Button
+            android:id="@+id/panel_right"
+            style="@style/KeyboardKey"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:text="→" />
+
+    </LinearLayout>
+
+    <!-- 测试键行：A 键 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <Button
+            android:id="@+id/panel_a"
+            style="@style/KeyboardKey"
+            android:layout_width="128dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:text="A 测试"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- 底部操作行 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/panel_switch_ime"
+            style="@style/KeyboardKey"
+            android:layout_width="128dp"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:text="⌨ 切换键盘"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/panel_close"
+            style="@style/KeyboardKey"
+            android:layout_width="128dp"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:text="✕ 关闭"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

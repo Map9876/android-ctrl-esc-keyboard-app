@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CliKeys" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryVariant">#1976D2</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#FF4081</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="android:windowBackground">#FFFFFF</item>
+    </style>
+
+    <style name="KeyboardKey">
+        <item name="android:background">@drawable/key_bg</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">#212121</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="KeyboardKey.CtrlActive">
+        <item name="android:background">@drawable/key_bg_ctrl_active</item>
+        <item name="android:textColor">#1565C0</item>
+    </style>
+</resources>

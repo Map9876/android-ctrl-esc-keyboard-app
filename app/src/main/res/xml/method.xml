@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    android:icon="@android:drawable/ic_dialog_info"
+    android:isDefault="false"
+    android:settingsActivity=".MainActivity"
+    android:supportsSwitchingToNextInputMethod="true">
+    <subtype
+        android:label="@string/app_name"
+        android:imeSubtypeMode="keyboard"
+        android:imeSubtypeLocale="en_US" />
+</input-method>

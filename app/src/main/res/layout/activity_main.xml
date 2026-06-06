@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CliKeys"
+            android:textColor="#2196F3"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android 命令行辅助输入法"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- 荣耀手机提示 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠ 荣耀手机用户：启用输入法后需重启手机才能使用"
+            android:textColor="#FF6B6B"
+            android:textSize="13sp"
+            android:layout_marginBottom="16dp"
+            android:background="#FFF3E0"
+            android:padding="8dp" />
+
+        <!-- 步骤 1：启用输入法 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="步骤 1：启用 CliKeys 输入法"
+            android:textColor="#2196F3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_enable_ime"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="启用输入法"
+            android:textSize="16sp"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 步骤 2：允许悬浮窗 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="步骤 2：允许悬浮窗权限"
+            android:textColor="#2196F3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_enable_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="允许悬浮窗"
+            android:textSize="16sp"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 步骤 3：启动悬浮窗 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="步骤 3：启动悬浮键"
+            android:textColor="#2196F3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_switch_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="切换键盘"
+            android:textSize="16sp"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="32dp" />
+
+        <!-- 使用说明 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="使用说明"
+            android:textColor="#2196F3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. 在终端应用（如 Termux）中，点击输入框\n2. 选择 CliKeys 作为输入法\n3. 使用 Esc、Ctrl、Alt 等修饰键\n4. Ctrl 键为切换模式，按下后高亮，此时按字母键即发送 Ctrl+字母\n5. 悬浮窗可拖拽，点击展开修饰键面板"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- GitHub 链接 -->
+        <TextView
+            android:id="@+id/tv_github"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📦 GitHub: github.com/map9876/android-ctrl-esc-keyboard"
+            android:textColor="#2196F3"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="#F0F0F0"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+</ScrollView>

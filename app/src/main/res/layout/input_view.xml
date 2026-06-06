@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/input_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <!-- 第一行：Esc  Tab  Ctrl  Alt  Shift -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="4dp">
+
+        <Button
+            android:id="@+id/key_esc"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="Esc" />
+
+        <Button
+            android:id="@+id/key_tab"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="Tab" />
+
+        <Button
+            android:id="@+id/key_ctrl"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="Ctrl" />
+
+        <Button
+            android:id="@+id/key_alt"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="Alt" />
+
+        <Button
+            android:id="@+id/key_shift"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="⇧" />
+
+    </LinearLayout>
+
+    <!-- 第二行：Home  End  PgUp  PgDn  切换键盘 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="4dp">
+
+        <Button
+            android:id="@+id/key_home"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="Home" />
+
+        <Button
+            android:id="@+id/key_end"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="End" />
+
+        <Button
+            android:id="@+id/key_pgup"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="PgUp" />
+
+        <Button
+            android:id="@+id/key_pgdn"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="PgDn" />
+
+        <Button
+            android:id="@+id/key_switch"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="⌨" />
+
+    </LinearLayout>
+
+    <!-- 第三行：Q W E R T Y U I O P -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="2dp">
+
+        <Button
+            android:id="@+id/key_q"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="Q" />
+
+        <Button
+            android:id="@+id/key_w"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="W" />
+
+        <Button
+            android:id="@+id/key_e"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="E" />
+
+        <Button
+            android:id="@+id/key_r"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="R" />
+
+        <Button
+            android:id="@+id/key_t"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="T" />
+
+        <Button
+            android:id="@+id/key_y"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="Y" />
+
+        <Button
+            android:id="@+id/key_u"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="U" />
+
+        <Button
+            android:id="@+id/key_i"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="I" />
+
+        <Button
+            android:id="@+id/key_o"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="O" />
+
+        <Button
+            android:id="@+id/key_p"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="P" />
+
+    </LinearLayout>
+
+    <!-- 第四行：A S D F G H J K L -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="2dp"
+        android:paddingStart="16dp">
+
+        <Button
+            android:id="@+id/key_a"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="A" />
+
+        <Button
+            android:id="@+id/key_s"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="S" />
+
+        <Button
+            android:id="@+id/key_d"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="D" />
+
+        <Button
+            android:id="@+id/key_f"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="F" />
+
+        <Button
+            android:id="@+id/key_g"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="G" />
+
+        <Button
+            android:id="@+id/key_h"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="H" />
+
+        <Button
+            android:id="@+id/key_j"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="J" />
+
+        <Button
+            android:id="@+id/key_k"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="K" />
+
+        <Button
+            android:id="@+id/key_l"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="L" />
+
+    </LinearLayout>
+
+    <!-- 第五行：Z X C V B N M -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="2dp"
+        android:paddingStart="32dp">
+
+        <Button
+            android:id="@+id/key_z"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="Z" />
+
+        <Button
+            android:id="@+id/key_x"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="X" />
+
+        <Button
+            android:id="@+id/key_c"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/key_v"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="V" />
+
+        <Button
+            android:id="@+id/key_b"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="B" />
+
+        <Button
+            android:id="@+id/key_n"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="N" />
+
+        <Button
+            android:id="@+id/key_m"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="M" />
+
+    </LinearLayout>
+
+    <!-- 第六行：方向键 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="2" />
+
+        <Button
+            android:id="@+id/key_up"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="↑" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/key_left"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="←" />
+
+        <Button
+            android:id="@+id/key_down"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="↓" />
+
+        <Button
+            android:id="@+id/key_right"
+            style="@style/KeyboardKey"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="→" />
+
+    </LinearLayout>
+
+</LinearLayout>
