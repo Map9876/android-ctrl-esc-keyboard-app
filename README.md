@@ -78,6 +78,82 @@ GitHub: https://github.com/Map9876/android-ctrl-esc-keyboard-app
 
 ---
 
+## 开发者指南：Tag、Release 和 GitHub Actions 的关系
+
+### 关系图
+
+```
+开发者写代码 (git commit)
+       ↓
+推送到 GitHub (git push origin main)
+       ↓
+GitHub Actions 自动构建 ← 每次 push 到 main 都会触发
+       ↓
+创建版本号标记 (git tag v1.0.2)
+       ↓
+推送 tag 到 GitHub (git push origin v1.0.2)
+       ↓
+GitHub Actions 再次触发 ← 检测到 tag push
+       ↓
+构建 APK (assembleDebug + assembleRelease)
+       ↓
+自动创建 Release 页面 ← 包含 APK 下载链接
+       ↓
+用户下载 APK 安装使用
+```
+
+### 一键发布命令（复制粘贴即可）
+
+#### 方法 1：发布新版本（推荐）
+
+```bash
+# 1. 修改代码后，提交更改
+git add -A
+git commit -m "你的更新说明"
+
+# 2. 推送到 GitHub
+git push origin main
+
+# 3. 创建新版本 tag（修改版本号）
+git tag v1.0.3
+
+# 4. 推送 tag 触发自动构建和发布
+git push origin v1.0.3
+```
+
+#### 方法 2：快速发布（一步到位）
+
+```bash
+# 修改版本号 v1.0.X，然后复制粘贴执行
+git add -A && git commit -m "release: v1.0.3" && git push origin main && git tag v1.0.3 && git push origin v1.0.3
+```
+
+#### 方法 3：删除旧 tag 重新发布
+
+```bash
+# 如果需要重新发布某个版本
+git push origin --delete v1.0.3
+git tag -d v1.0.3
+git tag v1.0.3
+git push origin v1.0.3
+```
+
+### 查看发布结果
+
+- **构建状态**：https://github.com/Map9876/android-ctrl-esc-keyboard-app/actions
+- **下载 APK**：https://github.com/Map9876/android-ctrl-esc-keyboard-app/releases
+
+### 常见问题
+
+| 问题 | 原因 | 解决方法 |
+|------|------|----------|
+| Tag 推送失败 | 仓库规则限制 | 检查 Settings → Rules → Rulesets |
+| Release 创建失败 | Release immutability 开启 | 关闭该选项 |
+| Actions 没触发 | workflow 没有 tags 触发条件 | 确保 build.yml 包含 `tags: - 'v*'` |
+| APK 没上传成功 | Release 不可变 | 删除 Release 后重新推送 tag |
+
+---
+
 ## AI 开发提示词
 
 说明: 以下是ai开发的prompt提示词:
