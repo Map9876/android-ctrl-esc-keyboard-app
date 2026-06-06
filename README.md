@@ -159,38 +159,7 @@ git push origin v1.0.3
 说明: 以下是ai开发的prompt提示词:
 
 ```
-创建一个 Android 输入法应用，名为 CliKeys，用于提供 Ctrl、Esc、Alt、Shift 等修饰键功能，主要用于手机上的网页版终端/代码编辑器。
-
-主要功能需求：
-1. 作为 Android 输入法（InputMethodService）实现，可以从系统键盘选择器切换使用
-2. 提供完整的修饰键支持：Ctrl、Esc、Alt、Shift、Tab
-3. 提供方向键：上、下、左、右
-4. 提供 Home、End、PgUp、PgDn 光标移动键
-5. Ctrl/Alt 为切换模式：按下后高亮，此时按字母键发送 Ctrl+字母/Alt+字母
-6. 提供完整 QWERTY 字母键盘，支持 26 个字母输入
-7. 悬浮窗模式：可选的悬浮按钮，点击展开修饰键面板
-8. 悬浮窗可拖动，通过顶部拖动把手控制位置
-
-UI 设计要求：
-- 白色主题，浅色背景
-- 按钮背景为白色，文字为深灰色
-- 按动按钮时有颜色变化反馈（按下变灰）
-- 活跃修饰键（Ctrl/Alt/Shift）按下后显示浅蓝色背景
-- 键盘背景为纯白色
-
-技术实现要点：
-- 使用 Kotlin 语言开发
-- 使用 ViewBinding 进行视图绑定
-- 支持 Android 7.0+（API 24+）
-- 前台服务实现悬浮窗功能
-- 系统悬浮窗权限（SYSTEM_ALERT_WINDOW）
-
-使用场景：
-- Cloudflare Workers 在线代码编辑器全选代码（Ctrl+A）
-- CNB.cool VS Code Code Server 网页版中使用 CodeBuddy CLI 时按 Esc 退出
-- 各种网页版 Shell/Terminal 中使用 Tab 补全命令
-
-目标仓库：github.com/map9876/android-ctrl-esc-keyboard
+你好，请帮我创建一个安卓app，这个app是一个键盘，键盘上面有ctrl按键，和Esc按键，还有方向键，还有tab按键，这样我就可以在手机的网页上进行全选代码，比如在cloudflare workers在线网页代码编辑器上全选代码，还有cnb.cool上的vscode code server网页版里安装codebuddy cli这种交互式命令行ai agent，使用/config时候会需要用户按Esc键退出的问题，还有在各种网页版 shell / terminal等等需要tab补全代码的问题。
 ```
 
 ---
