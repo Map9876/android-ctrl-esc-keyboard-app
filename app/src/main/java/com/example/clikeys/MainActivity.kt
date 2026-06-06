@@ -3,7 +3,6 @@ package com.example.clikeys
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
@@ -37,19 +36,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "请在列表中勾选 CliKeys", Toast.LENGTH_LONG).show()
             }
 
-            // 步骤 2：允许悬浮窗
-            binding.btnEnableOverlay.setOnClickListener {
-                Log.d(TAG, "btnEnableOverlay clicked")
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    val intent = Intent(
-                        Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                        Uri.parse("package:$packageName")
-                    )
-                    startActivity(intent)
-                }
-            }
-
-            // 步骤 3：切换键盘
+            // 步骤 2：切换键盘
             binding.btnSwitchKeyboard.setOnClickListener {
                 Log.d(TAG, "btnSwitchKeyboard clicked")
                 val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -88,10 +75,6 @@ class MainActivity : AppCompatActivity() {
             val imeEnabled = isImeEnabled()
             binding.btnEnableIme.text = if (imeEnabled) "✓ 输入法已启用" else "启用输入法"
 
-            // 检查悬浮窗权限
-            val overlayGranted = hasOverlayPermission()
-            binding.btnEnableOverlay.text = if (overlayGranted) "✓ 悬浮窗已允许" else "允许悬浮窗"
-
             // 更新切换键盘按钮状态
             binding.btnSwitchKeyboard.isEnabled = imeEnabled
             binding.btnSwitchKeyboard.text = if (imeEnabled) "切换键盘" else "请先启用输入法"
@@ -107,31 +90,5 @@ class MainActivity : AppCompatActivity() {
             Settings.Secure.ENABLED_INPUT_METHODS
         ) ?: return false
         return enabledImes.contains(imeService)
-    }
-
-    private fun hasOverlayPermission(): Boolean {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            Settings.canDrawOverlays(this)
-        } else true
-    }
-
-    private fun isFloatingRunning(): Boolean {
-        return FloatingWindowService.instance != null
-    }
-
-    private fun startFloatingService() {
-        try {
-            val intent = Intent(this, FloatingWindowService::class.java)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                startForegroundService(intent)
-            } else {
-                startService(intent)
-            }
-            Toast.makeText(this, "悬浮键已启动", Toast.LENGTH_SHORT).show()
-            updateButtonStates()
-        } catch (e: Exception) {
-            Log.e(TAG, "startFloatingService error: ${e.message}", e)
-            Toast.makeText(this, "启动失败: ${e.message}", Toast.LENGTH_LONG).show()
-        }
     }
 }

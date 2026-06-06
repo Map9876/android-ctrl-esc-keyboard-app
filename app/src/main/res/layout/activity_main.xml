@@ -59,31 +59,11 @@
             android:textColor="#FFFFFF"
             android:layout_marginBottom="24dp" />
 
-        <!-- 步骤 2：允许悬浮窗 -->
+        <!-- 步骤 2：切换键盘 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="步骤 2：允许悬浮窗权限"
-            android:textColor="#2196F3"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
-
-        <Button
-            android:id="@+id/btn_enable_overlay"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="允许悬浮窗"
-            android:textSize="16sp"
-            android:backgroundTint="#2196F3"
-            android:textColor="#FFFFFF"
-            android:layout_marginBottom="24dp" />
-
-        <!-- 步骤 3：启动悬浮窗 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="步骤 3：启动悬浮键"
+            android:text="步骤 2：切换键盘"
             android:textColor="#2196F3"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -112,7 +92,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1. 在终端应用（如 Termux）中，点击输入框\n2. 选择 CliKeys 作为输入法\n3. 使用 Esc、Ctrl、Alt 等修饰键\n4. Ctrl 键为切换模式，按下后高亮，此时按字母键即发送 Ctrl+字母\n5. 悬浮窗可拖拽，点击展开修饰键面板"
+            android:text="1. 在终端应用（如 Termux）中，点击输入框\n2. 选择 CliKeys 作为输入法\n3. 使用 Esc、Ctrl、Alt 等修饰键\n4. Ctrl 键为切换模式，按下后高亮，此时按字母键即发送 Ctrl+字母\n5. 完整 QWERTY 键盘支持 26 个字母输入"
             android:textColor="#333333"
             android:textSize="13sp"
             android:lineSpacingExtra="4dp"
@@ -123,7 +103,7 @@
             android:id="@+id/tv_github"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="📦 GitHub: github.com/map9876/android-ctrl-esc-keyboard"
+            android:text="📦 GitHub: github.com/Map9876/android-ctrl-esc-keyboard-app"
             android:textColor="#2196F3"
             android:textSize="14sp"
             android:gravity="center"
