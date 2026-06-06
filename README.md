@@ -89,18 +89,30 @@ GitHub: https://github.com/Map9876/android-ctrl-esc-keyboard-app
        ↓
 GitHub Actions 自动构建 ← 每次 push 到 main 都会触发
        ↓
-创建版本号标记 (git tag v1.0.2)
+创建版本号标记 (git tag v1.0.X)
        ↓
-推送 tag 到 GitHub (git push origin v1.0.2)
+推送 tag 到 GitHub (git push origin v1.0.X)
        ↓
 GitHub Actions 再次触发 ← 检测到 tag push
        ↓
-构建 APK (assembleDebug + assembleRelease)
+构建 APK (assembleDebug)
        ↓
 自动创建 Release 页面 ← 包含 APK 下载链接
        ↓
 用户下载 APK 安装使用
 ```
+
+### Tag 与 Commit 的关系
+
+**一个 tag 可以对应多次 commit push**，后面的 APK 会覆盖前面的。
+
+```
+git commit -m "功能A" && git push origin main  ← 触发构建
+git commit -m "功能B" && git push origin main  ← 再次触发构建
+git tag v1.0.5 && git push origin v1.0.5       ← Release 只包含最新代码
+```
+
+> **注意**：GitHub Actions 每次 push 到 main 都会构建，但只有 push tag 时才会创建 Release。同一个 tag 只能对应一个 Release，多次 commit push 到 main 后再 push tag，Release 里的 APK 是最新代码编译的。
 
 ### 一键发布命令（复制粘贴即可）
 

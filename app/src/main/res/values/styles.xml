@@ -12,10 +12,15 @@
     <style name="KeyboardKey">
         <item name="android:background">@drawable/key_bg</item>
         <item name="android:padding">4dp</item>
-        <item name="android:textColor">#212121</item>
+        <item name="android:textColor">#000000</item>
         <item name="android:textSize">12sp</item>
         <item name="android:gravity">center</item>
         <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="KeyboardKey.FunctionKey">
+        <item name="android:background">@drawable/key_bg_function</item>
+        <item name="android:textColor">#000000</item>
     </style>
 
     <style name="KeyboardKey.CtrlActive">
