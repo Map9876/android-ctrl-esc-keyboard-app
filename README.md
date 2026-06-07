@@ -7,7 +7,7 @@
 
 主要用于应急使用，因为手机只能选择一个键盘使用，该键盘样式比较丑 。
 
-Using Ctrl and Esc keys
+An Android keyboard app that supports Ctrl, Esc, Alt, Tab keys and arrow keys. Supports Ctrl+A (select all), Ctrl+C (copy), Ctrl+V (paste), Ctrl+Z (undo) and other shortcut combinations. Designed for use in web-based terminals, code editors, and IDEs on mobile devices.
 
 ## 应用截图
 
@@ -17,7 +17,7 @@ Using Ctrl and Esc keys
 
 ### 键盘页面
 
-![键盘页面](docs-image/Screenshot_20260607_033658_com_tencent_mm_MMWebViewUI.jpg)
+![键盘页面](docs-image/Screenshot_20260607_075432_com_tencent_mm_MMWebViewUI.jpg)
 
 ---
 
