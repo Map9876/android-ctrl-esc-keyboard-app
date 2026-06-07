@@ -1,5 +1,9 @@
 # CliKeys - Android Ctrl/Esc 键盘
 
+```
+/resume 0619d92f-410b-4974-bce7-06881b5359b0
+```
+
 手机使用ctrl和Esc键的键盘app。主要用于解决以下问题:
 
 1. 比如在cloudflare workers在线网页代码编辑器上全选代码；
